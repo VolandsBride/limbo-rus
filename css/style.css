@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@500;600&family=Oswald:wght@700&family=Raleway:wght@400;500;800&display=swap");
-.music-container {
-  font-family: "Kodchasan", sans-serif;
-  font-weight: 500;
-}
-
 .menu__list-link {
   font-family: "Kodchasan", sans-serif;
   font-weight: 600;
@@ -325,53 +320,4 @@ body {
 }
 .menu__list-link:hover svg path {
   fill: #FE6900;
-}
-
-.music-container {
-  padding: 40px 120px;
-  background-color: #242424;
-  color: #FFF;
-  font-size: 25px;
-}
-
-.music-info {
-  display: flex;
-  align-items: center;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 23px;
-  width: 210px;
-  position: relative;
-}
-
-.action-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  margin-right: 7px;
-}
-
-.action-btn:focus {
-  outline: 0;
-}
-
-.progress-container {
-  width: 180px;
-  height: 8px;
-  background-color: #D9D9D9;
-  border-radius: 10px;
-  margin-left: auto;
-  cursor: pointer;
-}
-
-.progress {
-  background-color: #FE6900;
-  border-radius: 10px;
-  height: 100%;
-  width: 0%;
-  transition: width 0.1s linear;
 }/*# sourceMappingURL=style.css.map */
