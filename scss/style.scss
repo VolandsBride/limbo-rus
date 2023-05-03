@@ -17,6 +17,7 @@
   }
   &__logo {
     position: relative;
+    margin-bottom: -3px;
     transition: all .2s ease-in;
     &:hover {
       opacity: 0.7;
@@ -43,6 +44,7 @@
   &__text {
     @extend %Raleway-400;
     max-width: 650px; 
+    width: 100%;
     font-size: 20px;
     color: $text-white;
     opacity: 70%;
@@ -88,3 +90,57 @@
     }
   }
 }
+
+.music-container {
+  padding: 40px 120px;
+  background-color: $grey;
+  @extend %Kodchasan-500;
+  color: $text-white;
+  font-size: 25px;
+}
+
+.music-info{
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 23px;
+  width: 210px;
+  position: relative;
+}
+
+.action-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer; 
+  margin-right: 7px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+
+.progress-container {
+  width: 180px;
+  height: 8px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.progress {
+  background-color: $accent;
+  border-radius: 10px;
+  height: 100%;
+  width: 0%;
+  transition: width  0.1s linear;
+}
+
+
+
