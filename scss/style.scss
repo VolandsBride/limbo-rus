@@ -1,0 +1,89 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+
+
+.header {
+  &__top {
+    background-color: $grey;
+  }
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    position: relative;
+    transition: all .2s ease-in;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__content {
+    background-image: url('/images/bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: calc(100vh - 80px);
+  }
+  &__content-inner {
+    max-width: 660px; 
+    padding-top: 112px;
+    padding-left: 120px;
+  }
+  &__title {
+    @extend %Raleway-800;
+    font-size: 72px;
+    color: $accent;
+    margin-bottom: 30px;
+  }
+  &__text {
+    @extend %Raleway-400;
+    font-size: 20px;
+    color: $text-white;
+    opacity: 70%;
+    margin-bottom: 10px;
+    line-height: 25px;
+  }
+  &__text-inner {
+    padding-bottom: 22px;
+  }
+}
+
+
+
+.menu {
+  margin-right: 10px;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__list-item {
+    margin-right: 30px;
+  }
+  &__list-link {
+    @extend %Kodchasan-600;
+    color: $text-white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .2s ease-in;
+    svg {
+      path {
+        transition: all 0.1s ease-in;
+      }
+    }
+    &:hover {
+      color: $accent;
+      svg {
+        path {
+          fill: $accent;
+        }
+      }
+    }
+  }
+}

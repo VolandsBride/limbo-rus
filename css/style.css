@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@500;600&family=Oswald:wght@700&family=Raleway:wght@400;500;800&display=swap");
+.menu__list-link {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 600;
+}
+
+.button {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+.header__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.header__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+.menu {
+  margin-right: 10px;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+.menu__list-item {
+  margin-right: 30px;
+}
+.menu__list-link {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+.menu__list-link svg path {
+  transition: all 0.1s ease-in;
+}
+.menu__list-link:hover {
+  color: #FE6900;
+}
+.menu__list-link:hover svg path {
+  fill: #FE6900;
+}
+
+.button {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #FFF;
+  background-color: #101010;
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  padding: 11px 54px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.button:hover {
+  color: #FE6900;
+  border: 3px solid #FE6900;
+}
+.button:active {
+  color: #FE6900;
+  border: 3px solid #FE6900;
+  position: absolute;
+  margin-top: 1px;
+}
+
+.header__top {
+  background-color: #242424;
+}
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  position: relative;
+  transition: all 0.2s ease-in;
+}
+.header__logo:hover {
+  opacity: 0.7;
+}
+.header__content {
+  background-image: url("/images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: calc(100vh - 80px);
+}
+.header__content-inner {
+  max-width: 660px;
+  padding-top: 112px;
+  padding-left: 120px;
+}
+.header__title {
+  font-size: 72px;
+  color: #FE6900;
+  margin-bottom: 30px;
+}
+.header__text {
+  font-size: 20px;
+  color: #FFF;
+  opacity: 70%;
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+.header__text-inner {
+  padding-bottom: 22px;
+}
+
+.menu {
+  margin-right: 10px;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+.menu__list-item {
+  margin-right: 30px;
+}
+.menu__list-link {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+.menu__list-link svg path {
+  transition: all 0.1s ease-in;
+}
+.menu__list-link:hover {
+  color: #FE6900;
+}
+.menu__list-link:hover svg path {
+  fill: #FE6900;
+}/*# sourceMappingURL=style.css.map */

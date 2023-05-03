@@ -1,0 +1,40 @@
+$bg-black: #101010;
+$accent: #FE6900;
+$text-white: #FFF;
+$grey: #242424;
+
+%bg {
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+%Kodchasan-500{
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 500;
+}
+
+%Kodchasan-600{
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 600;
+}
+
+%Kodchasan-700{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+%Raleway-400 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+%Raleway-500 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+%Raleway-800 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
