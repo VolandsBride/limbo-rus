@@ -30,18 +30,19 @@
     min-height: calc(100vh - 80px);
   }
   &__content-inner {
-    max-width: 660px; 
     padding-top: 112px;
     padding-left: 120px;
   }
   &__title {
     @extend %Raleway-800;
+    max-width: 600px; 
     font-size: 72px;
     color: $accent;
     margin-bottom: 30px;
   }
   &__text {
     @extend %Raleway-400;
+    max-width: 650px; 
     font-size: 20px;
     color: $text-white;
     opacity: 70%;

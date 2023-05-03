@@ -194,6 +194,7 @@ select {
 
 body {
   min-height: 100vh;
+  background-color: #101010;
 }
 
 .container {
@@ -275,16 +276,17 @@ body {
   min-height: calc(100vh - 80px);
 }
 .header__content-inner {
-  max-width: 660px;
   padding-top: 112px;
   padding-left: 120px;
 }
 .header__title {
+  max-width: 600px;
   font-size: 72px;
   color: #FE6900;
   margin-bottom: 30px;
 }
 .header__text {
+  max-width: 650px;
   font-size: 20px;
   color: #FFF;
   opacity: 70%;
