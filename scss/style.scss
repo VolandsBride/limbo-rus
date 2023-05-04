@@ -91,6 +91,46 @@
   }
 }
 
+.player {
+  background-color: $grey;
+  display: flex;
+  padding: 50px 120px;
+  @extend %Kodchasan-500;
+  font-size: 25px;
+  color: $text-white;
+  align-items: center;
+  &__song {
+    margin-left: 10px;
+  }
+  .buttons {
+    max-width: 210px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-right: 30px;
+   
+    .btn {
+      margin-right: 20px;
+       cursor: pointer;
+    }
+  }
+  .progress__container {
+    content: '';
+    width: 120px;
+    height: 10px;
+    background-color: $light-grey;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: auto;
+    .progress {
+      background-color: $accent;
+      width: 50%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+}
+
 
 
 
