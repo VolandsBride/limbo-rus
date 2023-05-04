@@ -6,7 +6,7 @@
 
 .header {
   &__top {
-    background-color: $grey;
+    // background-color: $grey;
   }
   &__top-inner {
     display: flex;
@@ -46,7 +46,7 @@
     font-size: 20px;
     color: $text-white;
     opacity: 70%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     line-height: 25px;
   }
   &__text-inner {
@@ -88,10 +88,14 @@
   }
 }
 
-.player {
-  background-color: $grey;
-  
-  &__wrapper {
+#player {
+  background-image: url('/images/bg-blur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+  .player__wrapper {
     color: $text-white;
     margin: 0 auto;
     padding: 60px 0;
@@ -125,9 +129,11 @@
     .timeline {
       display: flex;
       justify-content: space-between;
+      @extend %Oswald-700;
+
     }
     .range-slider {
-      margin-top: 0.4em;
+      margin-top: 0.7em;
       position: relative;
       display: flex;
       user-select: none; 
@@ -153,10 +159,10 @@
     }
     .timeline-slider .slider-thumb {
       position: absolute;
-      width: 1.7em;
-      height: 1.7em;
+      width: 1.5em;
+      height: 1.5em;
       border-radius: 50%;
-      background: #111;
+      background: $grey;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -169,8 +175,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 0.7em;
-      height: 0.7em;
+      width: 0.8em;
+      height: 0.8em;
       background: #333;
       border-radius: inherit;
       transition: 0.3s;
@@ -256,7 +262,6 @@
       margin: 1em;
     }
   }
-}
 
 .footer {
   padding: 46px 0;
