@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>keep it underground. - limbo[rus]</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
-">
   <link rel="icon" type="image/x-icon" href="images/logo-circle.png">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -89,27 +88,66 @@
   </header>
 
   <div class="player">
-    <div class="buttons">
-      <div class="btn-prev btn">
-        <img src="./images/icons/song-prev.svg" alt="previous track">
+    <div class="player__wrapper">
+      <img class="cover" src="./images/logo-circle.png" alt="limbo music">
+      <h4 class="track-title">
+        taxi (sodade)
+      </h4>
+      <span class="artist-name">
+        limbo
+      </span>
+      <div class="timeline-slider">
+        <div class="timeline">
+          <small class="time">0:00</small>
+          <small class="fulltime">3:00</small>
+        </div>
+        <div class="range-slider">
+          <input type="range" min="0" max="100" value="0" class="slider">
+          <div class="slider-thumb"></div>
+          <div class="progress"></div>
+        </div>
       </div>
-      <div class="btn-play btn">
-        <img class="img__src" src="./images/icons/song-play.svg" alt="play track">
+      <div class="volume-slider">
+        <div class="volume-icon">
+          <span class="material-symbols-outlined">
+            volume_down
+          </span>
+        </div>
+        <div class="range-slider">
+          <input type="range" min="0" max="100" value="50" class="slider">
+          <div class="progress"></div>
+        </div>
       </div>
-      <div class="btn-next btn">
-        <img src="./images/icons/song-next.svg" alt="next track">
+      <div class="controls">
+        <button class="music-btn" id="btnPrev">
+          <span class="material-symbols-outlined">
+            fast_rewind
+          </span>
+        </button>
+        <button class="music-btn btn-main" id="mainPlayBtn">
+          <span class="material-symbols-outlined">
+            play_arrow
+          </span>
+        </button>
+        <button class="music-btn" id="btnNext">
+          <span class="material-symbols-outlined">
+            fast_forward
+          </span>
+        </button>
       </div>
-    </div>
-    <h4 class="player__title">
-      Now playing:
-    </h4>
-    <div class="player__song">
-      limbo - taxi (sodade)
-    </div>
-    <div class="progress__container">
-      <div class="progress"></div>
     </div>
   </div>
+  <audio id="audio" hidden>
+    <source src="./audio/taxi (sodade).mp3">
+  </audio>
+  <audio id="audio" hidden>
+    <source src="./audio/sodade (sodade).mp3">
+  </audio>
+  <audio id="audio" hidden>
+    <source src="./audio/">
+  </audio>
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>

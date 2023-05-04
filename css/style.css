@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@500;600&family=Oswald:wght@700&family=Raleway:wght@400;500;800&display=swap");
-.player {
+.player__wrapper .artist-name, .player__wrapper .track-title {
   font-family: "Kodchasan", sans-serif;
   font-weight: 500;
 }
@@ -190,7 +190,6 @@ select {
   vertical-align: middle;
 }
 
-
 *,
 *::after,
 *::before {
@@ -334,38 +333,154 @@ body {
 
 .player {
   background-color: #242424;
-  display: flex;
-  padding: 50px 120px;
-  font-size: 25px;
+}
+.player__wrapper {
   color: #FFF;
-  align-items: center;
-}
-.player__song {
-  margin-left: 10px;
-}
-.player .buttons {
-  max-width: 210px;
-  display: flex;
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 900px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-right: 30px;
 }
-.player .buttons .btn {
-  margin-right: 20px;
+.player__wrapper .cover {
+  border: 0.8em solid #171a1d;
+  border-radius: 50%;
+  box-shadow: 0.8em 0.8em 1.8em #151618, -0.8em -0.8em 1em #33353b;
+}
+.player__wrapper .track-title {
+  margin: 1em 0 0.5em 0;
+  font-size: 35px;
+  color: #FFF;
+}
+.player__wrapper .artist-name {
+  font-size: 25px;
+}
+.player__wrapper .timeline-slider {
+  margin: 2em auto;
+  max-width: 30em;
+  width: 100%;
+}
+.player__wrapper .timeline {
+  display: flex;
+  justify-content: space-between;
+}
+.player__wrapper .range-slider {
+  margin-top: 0.4em;
+  position: relative;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+}
+.player__wrapper .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.4em;
+  outline: none;
+  border-radius: 3px;
+  background: #1f1f1f;
+  box-shadow: inset 3px 3px 6px #000, 1px 1px 1px #909090;
   cursor: pointer;
 }
-.player .progress__container {
+.player__wrapper .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.7em;
+  height: 1.7em;
+  z-index: 3;
+  position: relative;
+}
+.player__wrapper .timeline-slider .slider-thumb {
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+  background: #111;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.player__wrapper .timeline-slider .slider-thumb::before {
   content: "";
-  width: 120px;
-  height: 10px;
-  background-color: #D9D9D9;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-left: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.7em;
+  height: 0.7em;
+  background: #333;
+  border-radius: inherit;
+  transition: 0.3s;
 }
-.player .progress__container .progress {
-  background-color: #FE6900;
+.player__wrapper .timeline-slider .range-slider:hover .slider-thumb::before {
+  background-color: #e75709;
+}
+.player__wrapper .progress {
   width: 50%;
-  height: 100%;
-  border-radius: 10px;
+  height: 0.4em;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #c72611, #e75709);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  pointer-events: none;
+}
+.player__wrapper .volume-slider {
+  max-width: 16em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player__wrapper .volume-slider .slider::-webkit-slider-thumb {
+  width: 0;
+}
+.player__wrapper .volume-icon {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+.player__wrapper .volume-icon span {
+  font-size: 2em;
+  padding-top: 0.2em;
+}
+.player__wrapper .music-btn {
+  background: linear-gradient(-60deg, #1e1f23, #2e3137);
+  border: none;
+  box-shadow: 0.3em 0.3em 0.8em #151618, -0.3em -0.3em 0.5em #33353b;
+  color: #FE6900;
+  width: 4em;
+  height: 4em;
+  border: 0.2em solid #FE6900;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s ease-in;
+}
+.player__wrapper .music-btn:hover {
+  background: linear-gradient(60deg, #1e1f23, #2e3137);
+  border: 0.2em solid orangered;
+}
+.player__wrapper .btn-main {
+  background: linear-gradient(-60deg, #c72611, #e75709);
+  width: 4.5em;
+  height: 4.5em;
+  color: #FFF;
+}
+.player__wrapper .btn-main:hover {
+  background: linear-gradient(60deg, #c72611, #e75709);
+}
+.player__wrapper .controls .music-btn {
+  margin: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .range-slider {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,8 +1,7 @@
 @import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
 @import 'global';
-
 
 
 
@@ -57,7 +56,6 @@
 }
 
 
-
 .menu {
   margin-right: 10px;
   &__list {
@@ -93,44 +91,177 @@
 
 .player {
   background-color: $grey;
-  display: flex;
-  padding: 50px 120px;
-  @extend %Kodchasan-500;
-  font-size: 25px;
-  color: $text-white;
-  align-items: center;
-  &__song {
-    margin-left: 10px;
-  }
-  .buttons {
-    max-width: 210px;
-    display: flex;
+  
+  &__wrapper {
+    color: $text-white;
+    margin: 0 auto;
+    padding: 60px 0;
+    max-width: 900px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-right: 30px;
-   
-    .btn {
-      margin-right: 20px;
-       cursor: pointer;
+    .cover {
+      border: 0.8em solid #171a1d;
+      border-radius: 50%;
+      box-shadow: 0.8em 0.8em 1.8em #151618,
+      -0.8em -0.8em 1em #33353b;
     }
-  }
-  .progress__container {
-    content: '';
-    width: 120px;
-    height: 10px;
-    background-color: $light-grey;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-left: auto;
+    .track-title {
+      margin: 1em 0 0.5em 0;
+      @extend %Kodchasan-500;
+      font-size: 35px;
+      color: $text-white;
+    }
+    .artist-name {
+      @extend %Kodchasan-500;
+      font-size: 25px;
+    }
+    .timeline-slider {
+      margin: 2em auto;
+      max-width: 30em; 
+      width: 100%;
+    }
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+    }
+    .range-slider {
+      margin-top: 0.4em;
+      position: relative;
+      display: flex;
+      user-select: none; 
+      width: 100%;   
+    }
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 0.4em;
+      outline: none;
+      border-radius: 3px;
+      background: #1f1f1f;
+      box-shadow: inset 3px 3px 6px #000,
+      1px 1px 1px #909090;
+      cursor: pointer;
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 1.7em;
+      height: 1.7em;
+      z-index: 3;
+      position: relative;
+    }
+    .timeline-slider .slider-thumb {
+      position: absolute;
+      width: 1.7em;
+      height: 1.7em;
+      border-radius: 50%;
+      background: #111;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 2;
+    }
+    .timeline-slider .slider-thumb::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0.7em;
+      height: 0.7em;
+      background: #333;
+      border-radius: inherit;
+      transition: 0.3s;
+    }
+    .timeline-slider 
+    .range-slider:hover
+    .slider-thumb::before {
+      background-color: #e75709;
+    }
     .progress {
-      background-color: $accent;
       width: 50%;
-      height: 100%;
-      border-radius: 10px;
+      height: 0.4em;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #c72611, #e75709);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      pointer-events: none;
+    }
+    .volume-slider {
+      max-width: 16em;
+      margin: 1em auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .volume-slider .slider::-webkit-slider-thumb {
+      width: 0;
+    }
+    .volume-icon {
+      margin: 0 0.5em;
+      cursor: pointer;
+    }
+    .volume-icon span {
+      font-size: 2em;
+      padding-top: 0.2em;
+    }
+    .music-btn {
+      background: linear-gradient(
+        -60deg,
+        #1e1f23,
+        #2e3137
+      );
+      border: none;
+      box-shadow: 0.3em 0.3em 0.8em #151618,
+      -0.3em -0.3em 0.5em #33353b;
+      color: $accent;
+      width: 4em;
+      height: 4em;
+      border: 0.2em solid $accent;
+      border-radius: 50%;
+      cursor: pointer;
+      margin: 0 5px;
+      transition: all .3s ease-in;
+      &:hover {
+        background: linear-gradient(
+        60deg,
+        #1e1f23,
+        #2e3137
+        );
+        border: 0.2em solid orangered;
+      }
+    }
+    .btn-main {
+      background: linear-gradient(
+        -60deg,
+        #c72611,
+        #e75709
+      );
+      width: 4.5em;
+      height: 4.5em;
+      color: $text-white;
+      &:hover {
+        background: linear-gradient(
+          60deg,
+          #c72611,
+          #e75709
+        );
+      }
+    }
+    .controls .music-btn {
+      margin: 1em;
     }
   }
 }
 
-
-
+@media screen and (max-width: 700px) {
+  .range-slider {
+    width: 100%;
+  }
+}
 
