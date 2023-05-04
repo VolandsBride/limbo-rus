@@ -4,7 +4,6 @@
 @import 'global';
 
 
-
 .header {
   &__top {
     background-color: $grey;
@@ -258,6 +257,22 @@
     }
   }
 }
+
+.footer {
+  padding: 46px 0;
+  text-align: center;
+  @extend %Raleway-400;
+  font-size: 20px;
+  &__copy {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 700px) {
   .range-slider {

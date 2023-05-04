@@ -14,7 +14,7 @@
   font-weight: 700;
 }
 
-.header__text {
+.footer, .header__text {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
@@ -477,6 +477,15 @@ body {
 }
 .player__wrapper .controls .music-btn {
   margin: 1em;
+}
+
+.footer {
+  padding: 46px 0;
+  text-align: center;
+  font-size: 20px;
+}
+.footer__copy {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (max-width: 700px) {
