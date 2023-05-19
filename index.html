@@ -89,13 +89,30 @@
 
   <div id="player">
     <div class="player__wrapper">
-      <!-- <img class="cover" src="./images/logo-circle.png" alt="limbo music"> -->
+      <div class="controls">
+        <button class="music-btn" id="btnPrev">
+          <span class="material-symbols-outlined">
+            fast_rewind
+          </span>
+        </button>
+        <button class="music-btn btn-main" id="mainPlayBtn">
+          <span class="material-symbols-outlined">
+            play_arrow
+          </span>
+        </button>
+        <button class="music-btn" id="btnNext">
+          <span class="material-symbols-outlined">
+            fast_forward
+          </span>
+        </button>
+      </div>
+      <p class="player-text">Now playing:</p>
       <h4 class="track-title">
         taxi (sodade)
       </h4>
-      <span class="artist-name">
+      <!-- <span class="artist-name">
         limbo
-      </span>
+      </span> -->
       <div class="timeline-slider">
         <div class="timeline">
           <small class="time">0:00</small>
@@ -117,23 +134,6 @@
           <input type="range" min="0" max="100" value="50" class="slider">
           <div class="progress"></div>
         </div>
-      </div>
-      <div class="controls">
-        <button class="music-btn" id="btnPrev">
-          <span class="material-symbols-outlined">
-            fast_rewind
-          </span>
-        </button>
-        <button class="music-btn btn-main" id="mainPlayBtn">
-          <span class="material-symbols-outlined">
-            play_arrow
-          </span>
-        </button>
-        <button class="music-btn" id="btnNext">
-          <span class="material-symbols-outlined">
-            fast_forward
-          </span>
-        </button>
       </div>
     </div>
     <audio id="audio" hidden>

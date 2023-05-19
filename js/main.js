@@ -17,9 +17,9 @@ let volumeMuted = false;
 let trackId = 0;
 
 const tracks = [
-  'taxi (sodade)',
-  'sodade (sodade)',
-  'love (sodade)',
+  'taxi [sodade]',
+  'sodade [sodade]',
+  'love [sodade]',
 ];
 
 playBtn.addEventListener('click', playTrack);
