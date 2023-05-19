@@ -18,8 +18,12 @@ let trackId = 0;
 
 const tracks = [
   'taxi [sodade]',
-  'sodade [sodade]',
-  'love [sodade]',
+  'look around',
+  'beautiful [sodade]',
+  'piensa en mí [luz casal]',
+  'so long',  
+  'please wash it all away [oblivion]',
+  'cyber rabbit',
 ];
 
 playBtn.addEventListener('click', playTrack);
