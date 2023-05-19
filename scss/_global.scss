@@ -17,6 +17,7 @@ body {
   max-width: 1200px;
   width: 100%;
   padding: 0 10px;
+  margin: 0 auto;
 }
 
 .menu {
@@ -52,6 +53,25 @@ body {
   }
 }
 
+.title {
+  @extend %Raleway-800;
+  max-width: 600px;
+  font-size: 72px;
+  color: $accent;
+  margin-bottom: 30px;
+}
+
+.text {
+  @extend %Raleway-400;
+  max-width: 650px;
+  width: 100%;
+  font-size: 20px;
+  color: $text-white;
+  opacity: 70%;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
 .button {
   @extend %Kodchasan-700;
   font-size: 16px;
@@ -74,4 +94,9 @@ body {
     opacity: 0.7;
     border: 3px solid $accent;
   }
+}
+
+.album-date {
+  font-style: italic;
+  opacity: 70%;
 }

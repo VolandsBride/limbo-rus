@@ -4,6 +4,7 @@
 @import 'global';
 
 
+
 .header {
   &__top-inner {
     display: flex;
@@ -26,31 +27,12 @@
     min-height: calc(100vh - 80px);
   }
   &__content-inner {
-    padding-top: 112px;
-    padding-left: 120px;
-  }
-  &__title {
-    @extend %Raleway-800;
-    max-width: 600px; 
-    font-size: 72px;
-    color: $accent;
-    margin-bottom: 30px;
-  }
-  &__text {
-    @extend %Raleway-400;
-    max-width: 650px; 
-    width: 100%;
-    font-size: 20px;
-    color: $text-white;
-    opacity: 70%;
-    margin-bottom: 20px;
-    line-height: 25px;
+    padding-top: 15vh;
   }
   &__text-inner {
     padding-bottom: 22px;
   }
 }
-
 
 .menu {
   margin-right: 10px;
@@ -69,6 +51,9 @@
     font-weight: 600;
     text-decoration: none;
     transition: all .2s ease-in;
+    &--active {
+      color: $accent;
+    }
     svg {
       path {
         transition: all 0.1s ease-in;
@@ -94,8 +79,6 @@
     padding: 50px 0;
     display: flex;
     align-items: center;
-    max-width: 1200px;
-    width: 100%;
     position: relative;
 
     .music-btn {
@@ -251,6 +234,51 @@
       padding-top: 0.2em;
     }
     
+  }
+}
+
+.albums {
+  min-height: calc(100vh - 80px);
+  background-image: url('/images/bg-blur.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-bottom: 10vh;
+  &__wrapper {
+    padding-top: 10vh;
+    .album {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+      &__info {
+        height: 100%;
+      }
+      &__cover {
+        height: 429px;
+        width: 429px;
+        margin-right: 56px;
+        border: 1px solid $accent;
+      }
+      &__info {
+        margin-top: -30px;
+      }
+      &__title {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+      &__desc {
+        margin-bottom: 30px;
+        opacity: 100%;
+      }
+      &__desc-inner {
+        padding-bottom: 10px;
+      }
+      &__btn {
+        margin-right: 15px;
+      }
+    }
   }
 }
 

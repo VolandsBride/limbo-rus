@@ -19,12 +19,12 @@
   font-weight: 700;
 }
 
-.footer, .header__text {
+.footer, .text {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 
-.header__title {
+.title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
 }
@@ -214,6 +214,7 @@ body {
   max-width: 1200px;
   width: 100%;
   padding: 0 10px;
+  margin: 0 auto;
 }
 
 .menu {
@@ -242,6 +243,23 @@ body {
 }
 .menu__list-link:hover svg path {
   fill: #FE6900;
+}
+
+.title {
+  max-width: 600px;
+  font-size: 72px;
+  color: #FE6900;
+  margin-bottom: 30px;
+}
+
+.text {
+  max-width: 650px;
+  width: 100%;
+  font-size: 20px;
+  color: #FFF;
+  opacity: 70%;
+  margin-bottom: 20px;
+  line-height: 25px;
 }
 
 .button {
@@ -267,6 +285,11 @@ body {
   border: 3px solid #FE6900;
 }
 
+.album-date {
+  font-style: italic;
+  opacity: 70%;
+}
+
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -288,23 +311,7 @@ body {
   min-height: calc(100vh - 80px);
 }
 .header__content-inner {
-  padding-top: 112px;
-  padding-left: 120px;
-}
-.header__title {
-  max-width: 600px;
-  font-size: 72px;
-  color: #FE6900;
-  margin-bottom: 30px;
-}
-.header__text {
-  max-width: 650px;
-  width: 100%;
-  font-size: 20px;
-  color: #FFF;
-  opacity: 70%;
-  margin-bottom: 20px;
-  line-height: 25px;
+  padding-top: 15vh;
 }
 .header__text-inner {
   padding-bottom: 22px;
@@ -328,6 +335,9 @@ body {
   text-decoration: none;
   transition: all 0.2s ease-in;
 }
+.menu__list-link--active {
+  color: #FE6900;
+}
 .menu__list-link svg path {
   transition: all 0.1s ease-in;
 }
@@ -347,8 +357,6 @@ body {
   padding: 50px 0;
   display: flex;
   align-items: center;
-  max-width: 1200px;
-  width: 100%;
   position: relative;
 }
 #player .player__wrapper .music-btn {
@@ -488,6 +496,51 @@ body {
 #player .player__wrapper .volume-icon span {
   font-size: 2em;
   padding-top: 0.2em;
+}
+
+.albums {
+  min-height: calc(100vh - 80px);
+  background-image: url("/images/bg-blur.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-bottom: 10vh;
+}
+.albums__wrapper {
+  padding-top: 10vh;
+}
+.albums__wrapper .album {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.albums__wrapper .album__info {
+  height: 100%;
+}
+.albums__wrapper .album__cover {
+  height: 429px;
+  width: 429px;
+  margin-right: 56px;
+  border: 1px solid #FE6900;
+}
+.albums__wrapper .album__info {
+  margin-top: -30px;
+}
+.albums__wrapper .album__title {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.albums__wrapper .album__desc {
+  margin-bottom: 30px;
+  opacity: 100%;
+}
+.albums__wrapper .album__desc-inner {
+  padding-bottom: 10px;
+}
+.albums__wrapper .album__btn {
+  margin-right: 15px;
 }
 
 .footer {
