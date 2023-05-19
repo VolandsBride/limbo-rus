@@ -543,6 +543,22 @@ body {
   margin-right: 15px;
 }
 
+.singles {
+  background-image: url("/images/bg-blur.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-bottom: 10vh;
+}
+.singles__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  height: 100%;
+}
+
 .footer {
   padding: 46px 0;
   text-align: center;
