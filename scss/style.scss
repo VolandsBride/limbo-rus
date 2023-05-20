@@ -5,6 +5,7 @@
 
 
 
+
 .header {
   &__top-inner {
     display: flex;
@@ -34,7 +35,12 @@
   }
 }
 
+.open {
+  display: flex !important;
+}
+
 .menu {
+
   margin-right: 10px;
   &__list {
     display: flex;
@@ -68,6 +74,54 @@
       }
     }
   }
+}
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  width: 50px;
+  height: 27px;
+}
+
+.burger span{
+  height: 3px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: $accent;
+}
+
+.burger::before, .burger::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: $light-grey;
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
 }
 
 #player {
@@ -360,9 +414,75 @@
 
 
 
-@media screen and (max-width: 700px) {
-  .range-slider {
-    width: 100%;
+@media (max-width: 930px) {
+  
+  .header {
+    position: relative;
+    &__content {
+      background-size: cover;
+    }
+    &__content-inner {
+      padding-top: 30px;
+    }
+    &__title {
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 60px;
+    }
+    &__text-inner {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+  
+  #player {
+    .player__wrapper {
+      justify-content: center;
+    }
+    .player__wrapper .volume-slider {
+      display: none;
+    }
   }
 }
 
+
+@media (max-width: 768px) {
+
+  .burger {
+    display: flex;
+    margin-right: 20px;
+  }
+  .menu {
+    transition: all .3s;
+    &__list {
+      z-index: 10;
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 90px 0 15px;
+      background: $bg-black;
+      top: 0;
+      bottom: 0;
+      opacity: 90%;
+      overflow: auto;
+      animation: burgerAnimation .3s;
+    }
+    &__list-item {
+      margin-right: 0;
+      padding: 30px;
+    }
+    &__list-link {
+      display: block;
+    }
+  }
+}
+  
+
+@keyframes burgerAnimation {
+  from {opacity: 0;}
+  to {opacity: .9;}
+}

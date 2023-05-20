@@ -1,3 +1,8 @@
+document.querySelector('.burger').addEventListener('click', function () {
+  this.classList.toggle('active');
+  document.querySelector('.menu__list').classList.toggle('open');
+});
+
 const playBtn = document.querySelector('#mainPlayBtn');
 const audio = document.querySelector('#audio');
 const btnPrev = document.querySelector('#btnPrev');
