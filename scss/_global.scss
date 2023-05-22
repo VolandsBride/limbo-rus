@@ -26,9 +26,11 @@ body {
     display: flex;
     align-items: center;
   }
+
   &__list-item {
     margin-right: 30px;
   }
+
   &__list-link {
     @extend %Kodchasan-600;
     color: $text-white;
@@ -37,13 +39,20 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: all .2s ease-in;
+
+    &--active {
+      color: $accent;
+    }
+
     svg {
       path {
         transition: all 0.1s ease-in;
       }
     }
+
     &:hover {
       color: $accent;
+
       svg {
         path {
           fill: $accent;
@@ -73,7 +82,7 @@ body {
 }
 
 .button {
-  @extend %Kodchasan-700;
+  @extend %Oswald-700;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
