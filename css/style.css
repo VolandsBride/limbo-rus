@@ -737,10 +737,10 @@ body {
 @media (max-width: 768px) {
   .burger {
     display: flex;
-    margin-right: 40px;
+    margin-right: 30px;
   }
   .header__top-inner {
-    padding: 30px 0;
+    padding: 20px 0;
   }
   .header__logo {
     z-index: 100;
@@ -767,7 +767,7 @@ body {
     animation: burgerAnimation 0.3s;
   }
   .menu__list-item {
-    margin: 0 0 50px 0;
+    margin: 0 0 30px 0;
     padding: 40px 0;
     border: 1px solid #FE6900;
     width: 100%;
